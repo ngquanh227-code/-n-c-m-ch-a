@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Quang Anh - Official Bio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #f0abfc 0%, #a855f7 50%, #3b82f6 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated Grid Background */
+        .bg-grid {
+            background-size: 30px 30px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        }
+
+        /* Glass Card Gen Z Style */
+        .genz-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Bouncy Button Effect */
+        .bouncy-btn {
+            transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bouncy-btn:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
+        }
+        .bouncy-btn:active {
+            transform: scale(0.97);
+        }
+
+        /* Floating Sticker Animation */
+        @keyframes floatSticker {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(5deg); }
+        }
+        .sticker-float {
+            animation: floatSticker 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-grid flex items-center justify-center p-4 sm:p-6 md:p-10 relative">
+
+    <!-- Decorative Floating Elements -->
+    <div class="absolute top-10 left-10 text-3xl sticker-float hidden sm:block">🚀</div>
+    <div class="absolute bottom-10 right-10 text-3xl sticker-float" style="animation-delay: 1.5s;">🔥</div>
+    <div class="absolute top-1/3 right-5 text-2xl sticker-float" style="animation-delay: 0.7s;">⭐</div>
+
+    <!-- Main Container -->
+    <div class="w-full max-w-md mx-auto relative z-10">
+        <div class="genz-card rounded-[2.5rem] p-6 sm:p-8 text-slate-800 relative overflow-hidden">
+            
+            <!-- Top Badge / Tag -->
+            <div class="flex justify-center mb-4">
+                <span class="bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full border border-purple-200 uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-bolt text-amber-500"></i> Gen Z Official Profile
+                </span>
+            </div>
+
+            <!-- Profile Banner & Avatar Section -->
+            <div class="relative w-full h-40 sm:h-44 rounded-2xl overflow-hidden mb-5 shadow-md group">
+                <!-- Ảnh nền mới đã được cập nhật -->
+                <img src="https://i.ibb.co/xqxS9m9S/IMG-4291.jpg" 
+                     alt="Ảnh nền Quang Anh" 
+                     class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+
+                <!-- Avatar Overlay -->
+                <div class="absolute bottom-3 left-3 flex items-center gap-3">
+                    <div class="w-16 h-16 sm:w-18 sm:h-18 rounded-full p-1 bg-white shadow-xl flex-shrink-0">
+                        <!-- Ảnh đại diện (Avatar) -->
+                        <img src="https://i.ibb.co/nMpZPWFM/quality-restoration-20250328231859851.jpg" 
+                             alt="Avatar Nguyễn Quang Anh" 
+                             class="w-full h-full rounded-full object-cover object-center">
+                    </div>
+                    <div>
+                        <h1 class="text-base sm:text-lg font-extrabold text-white flex items-center gap-1 drop-shadow">
+                            Nguyễn Quang Anh
+                            <span class="text-cyan-400 text-xs"><i class="fa-solid fa-circle-check"></i></span>
+                        </h1>
+                        <p class="text-[11px] text-purple-200 font-bold bg-white/20 backdrop-blur-md px-2 py-0.5 rounded-md inline-block mt-0.5">22.07.2007 • 19 Tuổi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio Description Box -->
+            <div class="bg-white/70 rounded-2xl p-4 sm:p-5 border border-white shadow-sm space-y-2.5 text-slate-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                    <span class="text-base">🎓</span>
+                    <span>Học ngành <strong class="text-purple-600 font-bold">Công Nghệ Giao Thông Vận Tải</strong>.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                    <span class="text-base">🚗</span>
+                    <span>Đã có "phó lái" đồng hành trên mọi chặng đường.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                    <span class="text-base">🚀</span>
+                    <span>Xây dựng sự nghiệp & vun vén tổ ấm nhỏ bằng tất cả đam mê!</span>
+                </div>
+            </div>
+
+            <!-- Social Links Section -->
+            <div class="mt-5 space-y-3">
+                <p class="text-[11px] font-extrabold tracking-widest text-slate-400 uppercase text-center mb-2">⚡ KẾT NỐI VỚI MÌNH ⚡</p>
+                
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@nqucuon?_r=1&_t=ZS-993pQRP1zKX" target="_blank" class="bouncy-btn flex items-center justify-between p-3.5 rounded-2xl bg-black text-white shadow-md group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-lg text-white">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sm">TikTok</span>
+                            <span class="block text-[11px] text-slate-400">@nqucuon</span>
+                        </div>
+                    </div>
+                    <div class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-pink-500 transition-colors">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/1C6pBa6yQw/?mibextid=wwXIfr" target="_blank" class="bouncy-btn flex items-center justify-between p-3.5 rounded-2xl bg-blue-600 text-white shadow-md group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-lg text-white">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sm">Facebook</span>
+                            <span class="block text-[11px] text-blue-100">Nguyễn Quang Anh</span>
+                        </div>
+                    </div>
+                    <div class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-blue-400 transition-colors">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </a>
+
+                <!-- Zalo -->
+                <a href="https://zalo.me/0962714685" target="_blank" class="bouncy-btn flex items-center justify-between p-3.5 rounded-2xl bg-sky-500 text-white shadow-md group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center font-bold text-xs text-white">
+                            Zalo
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sm">Zalo Chat</span>
+                            <span class="block text-[11px] text-sky-100">0962 714 685</span>
+                        </div>
+                    </div>
+                    <div class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-sky-400 transition-colors">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/ngqaanh?igsi=MWN3Nm9zMnpuYml2ZA%3D%3D&utm_source=qr" target="_blank" class="bouncy-btn flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 text-white shadow-md group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-lg text-white">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sm">Instagram</span>
+                            <span class="block text-[11px] text-pink-100">@ngqaanh</span>
+                        </div>
+                    </div>
+                    <div class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-amber-400 transition-colors">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-6 text-center text-[11px] text-slate-500 font-semibold">
+                ✨ Made with vibe by Quang Anh • 2026 ✨
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
