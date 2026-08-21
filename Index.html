@@ -105,7 +105,7 @@
             border: 1px solid var(--glass-border);
             box-shadow: var(--glass-shadow);
             border-radius: 30px;
-            padding: 2.5rem 1.5rem;
+            padding: 2.2rem 1.5rem;
             text-align: center;
             width: 100%;
             color: var(--text-dark);
@@ -125,8 +125,8 @@
             100% { transform: translateY(100%) rotate(45deg); }
         }
 
-        h1 { font-family: 'Dancing Script', cursive; font-size: 2.6rem; color: #d90429; margin-bottom: 12px; text-shadow: 1px 1px 3px rgba(255,255,255,0.8); line-height: 1.2; }
-        p { font-size: 1.1rem; font-weight: 700; margin-bottom: 25px; color: #6b0504; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: #d90429; margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(255,255,255,0.8); line-height: 1.2; }
+        p { font-size: 1.05rem; font-weight: 700; margin-bottom: 20px; color: #6b0504; }
 
         /* --- Nút bấm Glass nổi bật --- */
         .btn {
@@ -150,39 +150,35 @@
         .btn-solid { background: var(--primary-pink); color: white; border: none; }
         .btn-solid:hover { background: #d90429; color: white; }
 
-        /* --- Up Ảnh --- */
-        .img-upload-container {
+        /* --- Khung Ảnh Định Sẵn (Ảnh 1 & Ảnh 2) --- */
+        .preset-img-container {
             width: 100%; height: 210px;
-            background: rgba(255, 255, 255, 0.35);
-            border: 2px dashed rgba(255, 51, 102, 0.6);
-            border-radius: 18px; margin-bottom: 20px;
-            display: flex; justify-content: center; align-items: center;
-            overflow: hidden; position: relative; cursor: pointer;
-            transition: 0.3s;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 16px; margin-bottom: 20px;
+            overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            border: 2px solid rgba(255, 255, 255, 0.8);
         }
-        .img-upload-container:hover { background: rgba(255, 255, 255, 0.6); border-color: var(--primary-pink); }
-        .img-upload-container img { width: 100%; height: 100%; object-fit: cover; display: none; }
-        .img-upload-container .placeholder { color: var(--primary-pink); font-weight: bold; font-size: 1.1rem; pointer-events: none;}
-        .img-upload-container input[type="file"] {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;
+        .preset-img-container img {
+            width: 100%; height: 100%; object-fit: cover;
         }
 
         /* --- Trang 4: Mini Game --- */
-        .game-area { position: relative; height: 220px; width: 100%; background: rgba(255,255,255,0.15); border-radius: 18px; margin-bottom: 20px;}
+        .game-area { position: relative; height: 210px; width: 100%; background: rgba(255,255,255,0.15); border-radius: 16px; margin-bottom: 15px;}
         .game-heart { position: absolute; font-size: 2.2rem; cursor: pointer; transition: transform 0.2s, opacity 0.2s; color: #ff3366; filter: drop-shadow(0 0 5px rgba(255,255,255,0.8)); }
         .game-heart:hover { transform: scale(1.3); }
 
         /* --- Trang 5: Lý do --- */
         .reason-card {
-            background: rgba(255, 255, 255, 0.55); padding: 14px; border-radius: 16px;
-            margin: 10px 0; border-left: 5px solid var(--primary-pink); text-align: left;
+            background: rgba(255, 255, 255, 0.55); padding: 12px; border-radius: 14px;
+            margin: 8px 0; border-left: 5px solid var(--primary-pink); text-align: left;
             box-shadow: 0 4px 12px rgba(0,0,0,0.04);
         }
-        .reason-card h3 { color: #d90429; font-size: 1.05rem; margin-bottom: 4px; }
+        .reason-card h3 { color: #d90429; font-size: 1rem; margin-bottom: 3px; }
+        .reason-card p { font-size: 0.9rem; margin-bottom: 0 !important; }
 
         /* --- Trang 7: Chốt --- */
         #btn-no { position: absolute; font-size: 1rem; padding: 10px 20px; transition: all 0.15s ease-out; z-index: 100;}
-        .final-actions { position: relative; height: 120px; width: 100%; display: flex; justify-content: center; align-items: center;}
+        .final-actions { position: relative; height: 110px; width: 100%; display: flex; justify-content: center; align-items: center;}
     </style>
 </head>
 <body>
@@ -202,16 +198,14 @@
         </div>
     </div>
 
-    <!-- Trang 2 -->
+    <!-- Trang 2 (Đã tích hợp Ảnh 1) -->
     <div id="screen-2" class="screen">
         <div class="glass-panel">
             <h1>Hôm nay Thuỷ có nhớ anh không?</h1>
-            <p>Cho anh xem một chiếc ảnh xinh xắn của em hôm nay đi!</p>
+            <p>Nhìn chiếc ảnh xinh xắn này là thấy nhớ thế nhỉ! 🥰</p>
             
-            <div class="img-upload-container">
-                <div class="placeholder" id="ph-2"><i class="fa-solid fa-camera"></i> Bấm để tải ảnh lên nè</div>
-                <img id="img-preview-2" src="" alt="Ảnh của em">
-                <input type="file" accept="image/*" onchange="previewImage(this, 'img-preview-2', 'ph-2')">
+            <div class="preset-img-container">
+                <img src="https://i.ibb.co/JRPTkdDn/att-Iz-Wo-UW9c-YZe-AJAzri-Hevf-PKo0w-CPRa-HL5h-m-Iv0-g0.jpg" alt="Ảnh 1 của Thủy">
             </div>
 
             <div>
@@ -221,16 +215,14 @@
         </div>
     </div>
 
-    <!-- Trang 3 -->
+    <!-- Trang 3 (Đã tích hợp Ảnh 2 dạng Polaroid) -->
     <div id="screen-3" class="screen">
         <div class="glass-panel">
             <h1>Anh thì lúc nào cũng nhớ em!</h1>
-            <p>Tải một bức ảnh chụp chung của hai đứa mình lên đây nào!</p>
+            <p>Khoảnh khắc đáng yêu của chúng mình nè ❤️</p>
             
-            <div class="img-upload-container" style="border-radius: 12px; transform: rotate(-2deg); box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-                <div class="placeholder" id="ph-3"><i class="fa-solid fa-images"></i> Ảnh của chúng mình</div>
-                <img id="img-preview-3" src="" alt="Ảnh chung">
-                <input type="file" accept="image/*" onchange="previewImage(this, 'img-preview-3', 'ph-3')">
+            <div class="preset-img-container" style="transform: rotate(-2deg);">
+                <img src="https://i.ibb.co/Pv2kqJ6S/TID03154.jpg" alt="Ảnh 2 của chúng mình">
             </div>
             <button class="btn btn-solid" onclick="triggerRainAndNext(4)">Tiếp tục <i class="fa-solid fa-arrow-right"></i></button>
         </div>
@@ -252,24 +244,24 @@
             <h1>3 Điều anh mê em như điếu đổ</h1>
             <div class="reason-card">
                 <h3>1. Nụ cười của em 😊</h3>
-                <p style="margin:0; font-size: 0.95rem; font-weight: 500;">Chỉ cần thấy em cười là mọi mệt mỏi của anh biến mất hết.</p>
+                <p>Chỉ cần thấy em cười là mọi mệt mỏi của anh biến mất hết.</p>
             </div>
             <div class="reason-card">
                 <h3>2. Sự đáng yêu 🥰</h3>
-                <p style="margin:0; font-size: 0.95rem; font-weight: 500;">Dù đôi lúc hay dỗi nhưng lúc nào cũng ngoan và dễ thương.</p>
+                <p>Dù đôi lúc hay dỗi nhưng lúc nào cũng ngoan và dễ thương.</p>
             </div>
             <div class="reason-card">
                 <h3>3. Bữa ăn em nấu 🍳</h3>
-                <p style="margin:0; font-size: 0.95rem; font-weight: 500;">Làm anh béo lên nhưng anh nguyện ý!</p>
+                <p>Làm anh béo lên nhưng anh nguyện ý!</p>
             </div>
-            <button class="btn btn-solid" style="margin-top: 15px;" onclick="triggerRainAndNext(6)">Còn một điều nữa... <i class="fa-solid fa-hand-holding-heart"></i></button>
+            <button class="btn btn-solid" style="margin-top: 10px;" onclick="triggerRainAndNext(6)">Còn một điều nữa... <i class="fa-solid fa-hand-holding-heart"></i></button>
         </div>
     </div>
 
     <!-- Trang 6 -->
     <div id="screen-6" class="screen">
         <div class="glass-panel">
-            <i class="fa-solid fa-envelope-open-text" style="font-size: 4rem; color: #ff3366; margin-bottom: 20px;"></i>
+            <i class="fa-solid fa-envelope-open-text" style="font-size: 4rem; color: #ff3366; margin-bottom: 15px;"></i>
             <h1>Gửi cô gái nhỏ...</h1>
             <p>Cảm ơn em vì đã luôn ở bên, lắng nghe và đồng hành cùng anh. Quang Anh yêu Diệu Thuỷ rất nhiều!</p>
             <button class="btn btn-solid" onclick="triggerRainAndNext(7)">Mở thư <i class="fa-solid fa-heart"></i></button>
@@ -289,7 +281,7 @@
         </div>
         
         <div class="glass-panel" id="success-panel" style="display: none;">
-            <i class="fa-solid fa-motorcycle" style="font-size: 4rem; color: #ff1493; margin-bottom: 20px; animation: bounce 2s infinite;"></i>
+            <i class="fa-solid fa-motorcycle" style="font-size: 4rem; color: #ff1493; margin-bottom: 15px; animation: bounce 2s infinite;"></i>
             <h1>Chốt đơn nhé! 🎉</h1>
             <p>Cuối tuần này anh qua đón công chúa đi chơi nha. Yêu em! 🥰</p>
         </div>
@@ -339,27 +331,23 @@
             const rainContainer = document.getElementById('rain-container');
             const colors = ['#ffffff', '#ffccd5', '#ff9a9e', '#ff3366', '#ffb3c6'];
 
-            // Tạo cơn mưa gồm 25 trái tim mờ ảo bay vút qua màn hình rồi tự biến mất
             for(let i = 0; i < 25; i++) {
                 const heart = document.createElement('i');
                 heart.className = 'fa-solid fa-heart rain-heart';
                 
-                const size = Math.random() * 35 + 15; // Kích thước đa dạng
-                const blurAmount = Math.random() * 3; // Độ mờ ảo
+                const size = Math.random() * 35 + 15;
+                const blurAmount = Math.random() * 3;
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 
                 heart.style.fontSize = size + 'px';
                 heart.style.color = color;
                 heart.style.filter = `blur(${blurAmount}px) drop-shadow(0 0 8px rgba(255, 51, 102, 0.4))`;
                 
-                // Trải đều theo chiều ngang màn hình
                 heart.style.left = Math.random() * 100 + 'vw';
-                // Độ trễ ngẫu nhiên nhỏ để tạo cảm giác tự nhiên như cơn mưa lướt qua
                 heart.style.animationDelay = (Math.random() * 0.3) + 's';
 
                 rainContainer.appendChild(heart);
 
-                // Tự động xóa sạch DOM sau khi animation kết thúc (1.2 giây) để không nặng máy
                 setTimeout(() => {
                     heart.remove();
                 }, 1500);
@@ -375,23 +363,10 @@
         }
 
         function triggerRainAndNext(num) {
-            triggerHeartRain(); // Kích hoạt cơn mưa trái tim mờ ảo bay qua
+            triggerHeartRain();
             setTimeout(() => {
                 nextScreen(num);
-            }, 500); // Chuyển trang mượt mà ngay giữa lúc mưa trái tim đẹp nhất
-        }
-
-        function previewImage(input, imgId, phId) {
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById(imgId).src = e.target.result;
-                    document.getElementById(imgId).style.display = 'block';
-                    document.getElementById(phId).style.display = 'none';
-                    triggerHeartRain(); // Bật mưa trái tim khi chọn ảnh thành công
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
+            }, 500);
         }
 
         // --- 4. Mini Game Trang 4 ---
@@ -458,12 +433,10 @@
             success.style.display = 'block';
             success.style.animation = 'popIn 0.5s ease forwards';
             
-            // Kích hoạt cơn mưa trái tim hoành tráng khi bấm chốt đơn
             triggerHeartRain();
             setTimeout(triggerHeartRain, 400);
         });
 
-        // CSS Bổ Sung Animation PopIn & Bounce
         const style = document.createElement('style');
         style.innerHTML = `
             @keyframes popIn { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
@@ -473,5 +446,4 @@
     </script>
 </body>
 </html>
-
 
